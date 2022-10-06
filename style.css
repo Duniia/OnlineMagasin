@@ -1,0 +1,398 @@
+/* Basic Reset */
+::after, 
+::before{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+	background: #FAF9F6;
+	font-size:22px;
+	line-height: 32px;
+	color: #001769;
+	margin: 0;
+	padding: 0;
+	word-wrap:break-word !important;
+	font-family: Arial, Helvetica, sans-serif
+	}
+  
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+    @import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+
+h1 {
+	font-size: 40px;
+	text-align: center;
+	color: #000000;
+        margin-top: 20px;
+        text-align: left;
+        line-height: 0px;
+        font-family: Georgia, 'Times New Roman', Times, serif
+}	
+
+
+
+h3 a {
+	color: #000000;
+}
+
+a {
+	color: #000000;
+}
+
+#container {
+	margin: 0 auto;
+	max-width: 890px;
+}
+
+p {
+	text-align: center;
+}
+
+.toggle,
+[id^=drop] {
+	display: none;
+}
+
+/* Giving a background-color to the nav container. */
+nav { 
+	margin:0;
+	padding: 0;
+	background-color: #001769;
+}
+
+#logo {
+	display: block;
+	padding: 0 0px;
+	float: left;
+	font-size: 0px;
+	line-height: 0px;
+}
+
+/* Since we'll have the "ul li" "float:left"
+ * we need to add a clear after the container. */
+
+nav:after {
+	content:"";
+	display:table;
+	clear:both;
+}
+
+/* Removing padding, margin and "list-style" from the "ul",
+ * and adding "position:reltive" */
+nav ul {
+	float: right;
+	padding:0;
+	margin:0;
+	list-style: none;
+	position: relative;
+	}
+	
+/* Positioning the navigation items inline */
+nav ul li {
+	margin: 0px;
+	display:inline-block;
+	float: left;
+	background-color: #bf0a31;
+	}
+
+/* Styling the links */
+nav a {
+	display:block;
+	padding:10px 15px;	
+	color:#FFF;
+	font-size:17px;
+	text-decoration:none;
+}
+
+
+nav ul li ul li:hover { background: #000000; }
+
+/* Background color change on Hover */
+nav a:hover { 
+	background-color: #001769; 
+}
+
+/* Hide Dropdowns by Default
+ * and giving it a position of absolute */
+nav ul ul {
+	display: none;
+	position: absolute; 
+	/* has to be the same number as the "line-height" of "nav a" */
+	top: 60px; 
+}
+	
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+	display:inherit;
+}
+	
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width:170px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+
+/* Second, Third and more Tiers	
+ * We move the 2nd and 3rd etc tier dropdowns to the left
+ * by the amount of the width of the first tier.
+*/
+nav ul ul ul li {
+	position: relative;
+	top:-60px;
+	/* has to be the same number as the "width" of "nav ul ul li" */ 
+	left:170px; 
+}
+
+	
+/* Change ' +' in order to change the Dropdown symbol */
+li > a:after { content:  ' +'; }
+li > a:only-child:after { content: ''; }
+
+
+/* Media Queries
+--------------------------------------------- */
+
+@media all and (min-width : 768px) {
+.flex { width: 25%;}
+}
+
+@media all and (max-width : 768px) {
+
+	#logo {
+		display: block;
+		padding: 0;
+		width: 50%;
+		text-align: center;
+		float: none;
+	}
+
+	nav {
+		margin: 0;
+	}
+
+	/* Hide the navigation menu by default */
+	/* Also hide the  */
+	.toggle + a,
+	.menu {
+		display: none;
+	}
+
+	/* Stylinf the toggle lable */
+	.toggle {
+		display: block;
+		background-color: #bf0a31;
+		padding:14px 20px;	
+		color:#FFF;
+		font-size:17px;
+		text-decoration:none;
+		border:none;
+	}
+
+	.toggle:hover {
+		background-color: #000000;
+	}
+
+	/* Display Dropdown when clicked on Parent Lable */
+	[id^=drop]:checked + ul {
+		display: block;
+	}
+
+	/* Change menu item's width to 100% */
+	nav ul li {
+		display: block;
+		width: 100%;
+		}
+
+	nav ul ul .toggle,
+	nav ul ul a {
+		padding: 0 40px;
+	}
+
+	nav ul ul ul a {
+		padding: 0 80px;
+	}
+
+	nav a:hover,
+ 	nav ul ul ul a {
+		background-color: #000000;
+	}
+  
+	nav ul li ul li .toggle,
+	nav ul ul a,
+  nav ul ul ul a{
+		padding:14px 20px;	
+		color:#FFF;
+		font-size:17px; 
+	}
+
+	nav ul li ul li .toggle,
+	nav ul ul a {
+		background-color: #212121; 
+	}
+
+	/* Hide Dropdowns by Default */
+	nav ul ul {
+		float: none;
+		position:static;
+		color: #ffffff;
+		/* has to be the same number as the "line-height" of "nav a" */
+	}
+		
+	/* Hide menus on hover */
+	nav ul ul li:hover > ul,
+	nav ul li:hover > ul {
+		display: none;
+	}
+		
+	/* Fisrt Tier Dropdown */
+	nav ul ul li {
+		display: block;
+		width: 100%;
+	}
+
+	nav ul ul ul li {
+		position: static;
+		/* has to be the same number as the "width" of "nav ul ul li" */ 
+	}
+
+    .flex {
+        width: 25%;
+    }
+}
+
+@media all and (max-width : 330px) {
+
+	nav ul li {
+		display:block;
+		width: 94%;
+	}
+}
+
+/* Main style */ 
+
+.main{
+    padding: 10px;
+    text-align: center;
+}
+
+.main img{
+    width: 65%;
+    float: left;
+}
+
+.main_article2{
+    padding: 1px;
+    padding-right: 10px;
+    text-align: center;
+}
+.main_article2 img {
+    padding: 40px;
+    width: 35%;   
+    float: left; 
+}
+
+.p1 {
+    float: left;
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+}
+
+.thumbnail-grid {
+	user-select: none
+}
+
+.flex {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: stretch;
+	align-content: stretch;
+}
+
+.flex-item {
+	flex: 1 0 auto;
+}
+
+.thumbnail-grid figure {
+	position: relative;
+    width: 100%;
+	height: 131px;
+	border-radius: 2px;
+	box-shadow: inset 0 -40px 0 0 #BF0A31;
+	transition: all .9s ease-in-out;
+    text-align: right;
+
+}
+
+.thumbnail-grid figure:hover {
+	box-shadow: inset 0 -150px 0 0 #bf0a31bd;
+}
+
+.thumbnail-grid figcaption {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	color: #f4f4f4;
+	text-shadow: 0 0 3px #000;
+	bottom: 10px;
+	transition: all .7s ease-in-out;
+}
+
+.thumbnail-grid figure:hover figcaption {
+	bottom: 60px;
+}
+
+.thumbnail-grid figure.ip1 {
+	background: url(img/welcome.png) no-repeat center;
+	background-size: cover;
+
+}
+.thumbnail-grid figure.ip2 {
+	background: url(img/nihao.png) no-repeat center;
+	background-size: cover;
+}
+.thumbnail-grid figure.ip3 {
+	background: url(img/hieroglyphic-gc344942b7_1920.jpg) no-repeat center;
+	background-size: cover;
+}
+
+    /* Page footer and its sections*/
+
+    .some_image {
+        width: 32px;
+        margin-right: 16px;
+        margin-top: 16px;
+    }
+
+    .page_footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 15.25rem;
+    }
+
+    .page_footer_adress {
+        margin-top: 5px;
+    }
+    
+footer {
+    color: #614f4f;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #FAF9F6;
+}
+
+footer p {
+    color: #000000;
+    font-size: 12px;
+    padding: 10px;
+}

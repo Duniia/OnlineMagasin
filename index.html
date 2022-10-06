@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans;400,600" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/logo.png"/>
+    <title>Sprog Magasin</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="logo"> 
+                <a href="index.html"><img src="img/logo.png" alt="Logo" height=42 width=auto></a>
+            </div>
+    
+            <label for="drop" class="toggle">Menu</label>
+            <input type="checkbox" id="drop" />
+                <ul class="menu">
+                    <li><a href="index.htmls">Hjem</a></li>
+                    <li>
+                        <!-- First Tier Drop Down -->
+                        <label for="drop-1" class="toggle">Undervisning</label>
+                        <a href="#">Undervisning</a>
+                        <input type="checkbox" id="drop-1"/>
+                        <ul>
+                            <li><a href="#">Vælg sprog</a></li>
+                            <li><a href="#">Sprogcenter</a></li>
+                            <li><a href="#">Online Undervisning</a></li>
+                        </ul> 
+    
+                    </li>
+                    <li>
+    
+                    <!-- First Tier Drop Down -->
+                    <label for="drop-2" class="toggle">Services+</label>
+                    <a href="#">Services</a>
+                    <input type="checkbox" id="drop-2"/>
+                    <ul>
+                        <li><a href="#">Rejser</a></li>
+                        <li><a href="#">Aktiviteter</a></li>
+                        <li>
+                        
+    
+                        <ul>
+                            <li><a href="#">HTML/CSS</a></li>
+                            <li><a href="#">jQuery</a></li>
+                            <li><a href="#">Other</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                    </li>
+                    <li><a href="#">Graphic Design</a></li>
+                    <li><a href="#">Inspiration</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </nav>
+    </header>
+
+<main class="main">
+    <h1>Sprog magasin</h1>
+        <img src="img/kimono.jpg">     
+
+        <h3>Læs de seneste artikler</h3>
+
+		<section class="thumbnail-grid flex">
+			<a href="article1.html" class="flex-item">
+				<figure class="ip1">
+					<figcaption>Lær et nyt sprog</figcaption>
+				</figure>
+			</a>
+			<a href="article2.html" class="flex-item">
+				<figure class="ip2">
+					<figcaption>Brug ikke ni hao!</figcaption>
+				</figure>
+			</a>
+			<a href="article3.html" class="flex-item">
+				<figure class="ip3">
+					<figcaption>Skriftsprog</figcaption>
+				</figure>
+			</a>
+		</section>
+
+	</main>
+    <br>
+    <br>
+<hr>
+<footer class="page_footer theme_element_backgroundcolor">
+    <section class="page_footer_section" id="contact">
+        <h4>Contact us</h4>
+        <address class="page_footer_address">
+            Sprog Magasin A/S<br>
+            Magasin Street 101<br>
+            46352 Noname City<br>
+            Denmark<br>
+            Tel. 564 765 746<br>
+            contact@sprog.dk<br>
+        </address>
+    </section>
+
+    <section class="page_footer_section">
+        <h4>Follow us</h4>
+        <a href="http://www.twitter.com"><img src="img/twitterlogo.png" class="some_image" alt="Twitter icon"></a>
+        <a href="http://www.instagram.com"><img src="img/instalogo.png" class="some_image" alt="Instagram icon"></a>
+        <a href="http://www.facebook.com"><img src="img/fblogo.png" class="some_image" alt="Facebook icon"></a>
+    </section>
+</div>
+</footer>
+</body>
+</html>
